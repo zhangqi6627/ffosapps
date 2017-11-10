@@ -1,0 +1,9 @@
+{
+    "name": "FiREST",
+    "package_path" : "http://ubersoldat.github.io/FirefoxOS/FiREST/FiREST.zip",
+    "version": "0.1",
+    "developer": {
+        "name": "Alejandro Ayuso",
+        "url": "http://ubersoldat.github.io/FirefoxOS/"
+    }
+}

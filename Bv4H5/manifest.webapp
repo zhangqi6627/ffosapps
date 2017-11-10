@@ -1,0 +1,45 @@
+{
+  "version": "0.0.1",
+  "name": "Bv4H5",
+  "description": "BlueVia application for Firefox OS",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Andres L. Martinez a.k.a almo",
+    "url": "http://blog.insomne.org"
+  },
+  "permissions": {
+    "sms":{
+        "access":"readwrite"
+    },
+    "contacts":{
+        "access":"readwrite"
+    },
+    "settings":{
+        "access":"readwrite"
+    },
+    "alarms":{
+        "access":"readwrite"
+    },
+    "geolocation":{
+        "access":"readonly"
+    },
+    "storage":{
+        "access":"readwrite"
+    },
+    "network-http":{
+        "access":"readwrite"
+    }
+  },
+  "locales": {
+    "es": {
+      "name": "Bv4H5",
+      "description": "Aplicacion BlueVia para Firefox OS"
+    }
+  },
+  "default_locale": "en",
+  "icons": {
+    "54": "/images/firefox-54x62.png"
+  },
+  "installs_allowed_from": ["*"],
+  "orientation": "portrait-primary"
+}

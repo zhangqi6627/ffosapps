@@ -1,0 +1,24 @@
+{
+    "version":"2.0",
+    "name": "MapMe",
+    "description": "Retrieves current position and plots using Leaflet and OpenStreetMap.",
+    "launch_path": "/index.html",
+    "icons": {
+        "128": "/images/locate_me_icon_128.png",
+        "512": "/images/locate_me_icon_512.png"
+    },
+    "developer": {
+        "name": "Alex Hirschberg",
+        "url": "http://www.openbookproject.net/tutorials/fxos/"
+    },
+    "default_locale": "en",
+    "type": "privileged",
+    "permissions": {
+        "geolocation": {
+            "description": "Used to locate me"
+        },
+        "systemXHR": {
+            "description": "Required to make Network calls" 
+        }
+    }
+}

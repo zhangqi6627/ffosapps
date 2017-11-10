@@ -1,0 +1,14 @@
+{
+  "name": "Pacman",
+  "description": "An adaptation of pacman game for Firefox OS",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Kevin, Antony & Gram",
+    "url": "http://www.univ-evry.fr"
+  },
+  "default_locale": "en",
+  "version": "0.8.1"
+}

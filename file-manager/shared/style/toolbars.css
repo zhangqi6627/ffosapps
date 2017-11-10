@@ -1,0 +1,35 @@
+/* ----------------------------------
+* Toolbars
+* ---------------------------------- */
+
+[role="toolbar"] {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+[role="toolbar"] button {
+  width: 5.5rem;
+  position: relative;
+  flex: 1;
+  border: none;
+  background: transparent no-repeat 50% 50% / 3rem auto;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #919191;
+  border-radius: 0;
+  height: 45px;
+  font-size: 0;
+}
+
+[role="toolbar"] button:active,
+[role="toolbar"] a:active {
+  color: #fff;
+  background-color: #b2f2ff;
+}

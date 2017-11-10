@@ -1,0 +1,189 @@
+[class^="ui-icon-icon-"],
+[class*=" ui-icon-icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+[class^="ui-icon-icon-"]:before,
+[class*=" ui-icon-icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+@font-face {
+	font-family: 'mozTT';
+	src: url('../font/moztt_regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'mozTT';
+	src: url('../font/moztt_light-webfont.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'mozTT';
+	src: url('../font/moztt_medium-webfont.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+html,body {
+	font-family: mozTT, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.ui-body-a{
+  background: #272e33 url(../images/grain.png) repeat;
+  background-color: #272e33;
+  background-image: url(../images/grain.png);
+  background-repeat: repeat;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../font/fontawesome-webfont.woff?v=3.1.0') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ui-icon, .ui-icon-alt {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  
+  line-height: 19px;
+  background-color: transparent;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  
+  -moz-box-shadow: 0 0 0 rgba(255,255,255,.4);
+  -webkit-box-shadow: 0 0 0 rgba(255,255,255,.4);
+  box-shadow: 0 0 0 rgba(255,255,255,.4);
+  
+  text-shadow: 0 0 0 #111;
+  
+  -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+.ui-listview .ui-li-icon {
+	font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  
+  position: initial;
+  margin-top: 2px;
+}
+
+.ui-icon-checkbox-on{
+	font-size: 20px;
+}
+
+.ui-icon-checkbox-on:before {
+	content: "\f05d";
+}
+
+.ui-checkbox-on .ui-icon, .ui-radio-on .ui-icon {
+	background-color: transparent;
+	border-radius: 0px;
+}
+
+.left-header-button {
+  position: absolute;
+  top: 0;
+  border-right: 1px solid #333333;
+}
+
+.left-header-button i{
+    font-style: normal;
+    color: white;
+}
+
+.left-header-button a{
+    font-style: normal;
+    text-decoration: none;
+    font-weight: normal;
+    color: white;
+    display: block;
+    padding: 11px 10px 12px 10px;
+}
+
+.right-header-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 1px solid #333333;
+  color: white;
+}
+
+.right-header-button i{
+    font-style: normal;
+    color: white;
+}
+
+.right-header-button a{
+    font-style: normal;
+    text-decoration: none;
+    font-weight: normal;
+    color: white;
+    display: block;
+    padding: 11px 10px 12px 10px;
+}
+
+.progress-bar input[type=number], .ui-slider-handle{
+	display: none;
+}
+
+.progress-bar .ui-slider-track{
+  margin: 0px;
+}
+
+.serie-overview {
+	white-space: normal;
+	font-size: 14px;
+}
+
+.ui-btn-up-a, .ui-btn-up-b, .ui-btn-up-c, .ui-btn-up-d {
+	font-weight: normal;
+}
+
+.ui-btn-hover-a, .ui-btn-hover-b, .ui-btn-hover-c, .ui-btn-hover-d {
+  font-weight: normal;
+}
+
+.response-body {
+    margin-top: 30px;
+    font-size: 10px;
+    white-space: pre-wrap;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
+
+.response-body textarea{
+    font-size: 10px;
+    white-space: pre-wrap;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
+/**
+.ui-icon-searchfield:before {
+  font-family: FontAwesome;
+  content: "\f002";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+}
+*/

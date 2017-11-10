@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Blood Blank</title>
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" href="img/icon.png" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+
+	<style type="text/css">
+
+		.img1{
+			width: 100%;
+		}
+		#loader{
+			width: 80%;
+			height: 1em;
+			background-color: #E9B0B0;
+			margin:auto;
+		}
+		#loading{
+			width: 0%;
+			height: 100%;
+			background-color: #f00;
+		}
+
+	</style>
+
+
+</head>
+
+<body>
+
+<div data-role="page">
+
+	
+<img src="img/drop.png" class="img1">
+
+
+<div id="loader">
+	<div id="loading">
+</div>
+
+
+</div><!-- /page -->
+
+
+<script>
+
+	var loading = $('#loading');
+
+	i=10;
+
+	function load(){		
+
+			if(i>100)
+				window.location="front.html";
+			else{
+				loading.width(i+'%');
+				i+=10;
+			}
+	}
+
+
+	setInterval(function(){
+		load();
+	},200)
+
+	load();
+
+
+	//setTimeout(function(){
+		//window.location="front.html";
+	//},2000);
+
+</script>
+
+
+</body>
+
+
+</html>

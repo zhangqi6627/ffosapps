@@ -1,0 +1,9 @@
+{
+    "name": "TVFrik",
+    "package_path" : "http://ubersoldat.github.io/FirefoxOS/TVFrik/TVFrik-latest.zip",
+    "version": "0.2",
+    "developer": {
+        "name": "Alejandro Ayuso",
+        "url": "http://ubersoldat.github.io/FirefoxOS/"
+    }
+}

@@ -1,0 +1,84 @@
+{
+  "name": "File Manager",
+  "description": "File Manager for Firefox OS",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "/style/icons/icon_60.png",
+    "64": "/style/icons/icon_64.png",
+    "128": "/style/icons/icon_128.png",
+    "512": "/style/icons/icon_512.png"
+  },
+  "version": "1.0-beta2",
+  "developer": {
+    "name": "Jhon Klever",
+    "url": "https://github.com/elfoxero"
+  },
+  "default_locale": "en",
+  "permissions": {
+    "device-storage:sdcard": {
+      "description": "To access files from the SD card",
+      "access": "readwrite"
+    }
+  },
+  "activities": {
+    "open": {
+      "filters": {
+        "type": ["text/plain", "text/javascript", "application/x-javascript", "text/xml", "text/css", "text/html", "application/zip"]
+      },
+      "disposition": "inline",
+      "returnValue": true,
+      "href": "/elements/viewer.html"
+    },
+    "pick-folder": {
+      "disposition": "inline",
+      "returnValue": true,
+      "href": "/elements/folder.html"
+    },
+    "filemanager@elfoxero:pick-folder": {
+      "disposition": "inline",
+      "returnValue": true,
+      "href": "/elements/folder.html"
+    },
+    "pick": {
+      "disposition": "inline",
+      "returnValue": true,
+      "href": "/elements/pick.html"
+    }
+  },
+  "locales": {
+    "ca": {
+      "name": "Gestió de fitxers"
+    },
+    "de": {
+      "name": "Dateimanager"
+    },
+    "es": {
+      "name": "Mis Archivos"
+    },
+    "eu": {
+      "name": "Nire fitxategiak"
+    },
+    "fr": {
+      "name": "Mes Fichiers"
+    },
+    "it": {
+      "name": "File Manager"
+    },
+    "ja": {
+      "name": "File Manager"
+    },
+    "nl": {
+      "name": "Bestandsbeheer"
+    },
+    "pl": {
+      "name": "Menedżer Plików"
+    },
+    "pt-BR": {
+      "name": "Meus Arquivos"
+    },
+    "uk": {
+      "name": "File Manager"
+    }
+  },
+  "type": "privileged"
+}

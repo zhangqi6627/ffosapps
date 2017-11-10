@@ -1,0 +1,151 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    background-color: #fff;
+    height: 100%;
+}
+body {
+    background: none;
+    font-family: helvetica;
+    font-size: 14px;
+    background-color: #eff7fc
+}
+
+section[role="region"] {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+#event-detail {
+    margin: 5px;
+}
+
+.divContainer {
+    display: table;
+    width: 100%;
+    border-spacing: 0 5px;
+}
+
+.item {
+    display: table-row;
+}
+
+.item > div {
+    background-color: #fff;
+    vertical-align:middle;
+    padding: 8px 5px 5px 5px;
+}
+
+.item > div:first-child {
+    border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+}
+
+.item > div:last-child {
+    border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+}
+
+.itemBody {
+    display: table-cell;
+}
+
+.event-logo, .event-title {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.event-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.proposal-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #F00;
+}
+
+.votes {
+    position: relative;
+    padding: 5px;
+    width: 50px;
+    height:35px;
+    margin: 20 0 40px 20px;
+    padding-top: 15px;
+    border: 1px dotted #bababa;
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.red {
+    background-color: #F00
+}
+
+.green {
+    background-color: #0F0
+}
+
+/* ----------------------------------
+ * Progress + activities
+ * ----------------------------------
+ */
+
+progress {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+}
+
+progress:not([value]) {
+    background: url(../images/default.png) no-repeat center center / 100% auto;
+    animation: 0.9s rotate infinite steps(30);
+    width: 2.9rem;
+    height: 2.9rem;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+progress:not([value])::-moz-progress-bar {
+    background: none;
+}
+
+progress[value] {
+    width: 100%;
+    background: #333;
+    border: none;
+    border-radius: 0.3rem;
+    height: 0.3rem;
+    display: block;
+}
+
+progress[value]::-moz-progress-bar {
+    background: #01c5ed;
+    border-radius: 0;
+}
+
+/* Animations */
+@keyframes rotate {
+    from {
+        transform: rotate(1deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1rem 0;
+    }
+}

@@ -1,0 +1,81 @@
+<!--
+
+ File Manager - A Firefox OS file manager app
+ Copyright (C) 2013-2015 Jhon Klever
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ https://github.com/elfoxero/file-manager/blob/master/LICENSE
+
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>File Viewer</title>
+
+  <link rel="stylesheet" href="../shared/style/headers.css">
+  <link rel="stylesheet" href="../shared/style/toolbars.css">
+  <link rel="stylesheet" href="../shared/style/confirm.css">
+
+  <link rel="stylesheet" href="../style/action_icons.css">
+
+  <link rel="stylesheet" href="../style/util.css">
+  <link rel="stylesheet" href="../style/fonts.css">
+
+  <link rel="stylesheet" href="../style/cross_browser.css">
+
+  <link rel="stylesheet" href="../style/extra.css">
+
+  <link rel="stylesheet" href="../style/transitions.css">
+
+  <link rel="stylesheet" href="../style/viewer.css">
+  <link rel="stylesheet" href="../shared/extra.css">
+  <link rel="stylesheet" href="../style/text.css">
+
+  <link rel="icon" type="image/png" href="../style/icons/icon_64.png">
+
+  <!-- END OF STYLES -->
+
+  <link rel="prefetch" type="application/l10n" href="../locales/locales.ini">
+</head>
+<body>
+  <section id="index" data-position="current" class="left-to-current">
+    <section id="drawer" role="region" class="skin-dark">
+      <header>
+        <button id="close"><span class="icon icon-close">close</span></button>
+        <menu type="toolbar" class="hide"><button id="save" data-l10n-id="save">Save</button></menu>
+        <h1 id="name"></h1>
+      </header>
+      <article>
+        <section class="content"></section>
+        <div role="toolbar"></div>
+      </article>
+    </section>
+  </section>
+
+  <section data-position="back" class="fullscreen">
+    <form role="dialog" data-type="confirm">
+      <section>
+        <p></p>
+      </section>
+      <menu></menu>
+    </form>
+  </section>
+
+  <!-- START OF SCRIPTS -->
+
+  <script defer src="../js/lib/l10n.js"></script>
+
+  <script defer src="../js/viewer.js"></script>
+</body>
+</html>

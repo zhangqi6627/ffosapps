@@ -1,0 +1,22 @@
+{
+    "version": "1",
+    "name": "Prueba",
+    "launch_path": "/index.html",
+    "description": "Descripcion",
+    "developer": {
+        "name": "Saulo Damian Cabral",
+        "url": "virtua.mx"
+    },
+    "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "60": "logo.png",
+    "64": "logo.png",
+    "90": "logo.png",
+    "120": "logo.png",
+    "128": "logo.png"
+    },
+    "installs_allowed_from": ["*"],
+    "default_locale": "es"
+}

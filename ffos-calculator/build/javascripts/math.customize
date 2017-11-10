@@ -1,0 +1,77 @@
+(function() {
+  var rates, setRates;
+
+  math.config({
+    number: 'bignumber'
+  });
+
+  math.type.Unit.BASE_UNITS.MONEY = {};
+
+  math.sin.transform = function(a) {
+    if (a % math.pi === 0) {
+      return 0;
+    } else {
+      return math.sin(a);
+    }
+  };
+
+  math.factorial.transform = function(a) {
+    if (a > 100000) {
+      throw new math.error.ArgumentsError();
+    } else {
+      return math.factorial(a);
+    }
+  };
+
+  math.zero = function(a) {
+    return (a.re === 0 && a.im === 0) || (a.value === 0) || (a instanceof math.type.BigNumber && a.toNumber() === 0);
+  };
+
+  math.divide.transform = function(a, b) {
+    if (math.zero(b)) {
+      throw new math.error.ArgumentsError();
+    } else {
+      return math.divide(a, b);
+    }
+  };
+
+  math.log.transform = function(a) {
+    if (math.zero(a)) {
+      throw new math.error.ArgumentsError();
+    } else {
+      return math.log(a);
+    }
+  };
+
+  math.log10.transform = function(a) {
+    if (math.zero(a)) {
+      throw new math.error.ArgumentsError();
+    } else {
+      return math.log10(a);
+    }
+  };
+
+  setRates = function(rates) {
+    var $currency, currency;
+    for (currency in rates) {
+      if ($currency = document.getElementById(currency.toLowerCase())) {
+        $currency.value = rates[currency];
+      }
+      math.type.Unit.UNITS[currency] = {
+        name: currency,
+        base: math.type.Unit.BASE_UNITS.MONEY,
+        prefixes: math.type.Unit.PREFIXES.NONE,
+        value: 1 / rates[currency],
+        offset: 0
+      };
+    }
+    return localStorage.setItem("rates", JSON.stringify(rates));
+  };
+
+  if (!window.rates && (rates = localStorage.getItem("rates"))) {
+    window.rates = JSON.parse(rates);
+  }
+
+  setRates(window.rates);
+
+}).call(this);

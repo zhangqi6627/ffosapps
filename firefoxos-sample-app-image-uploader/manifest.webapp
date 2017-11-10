@@ -1,0 +1,35 @@
+{
+  "name": "Imgur Image Uploader",
+  "description": "An app to share images using the imgur service. It can upload anonymously or on behalf of your user.",
+  "launch_path": "/index.html",
+  "type": "privileged",
+  "version": "2.1",
+  "activities": {
+      "share": {
+            "href": "./index.html",
+            "disposition": "inline",
+            "filters": {
+              "type": ["image/*","image/jpeg","image/png"]
+            },
+            "returnValue": true
+          }
+  },
+  "icons": {
+    "128": "/icons/logo_128.png",
+    "60": "/icons/logo_60.png"
+  },
+  "developer": {
+    "name": "Andre Garzia",
+    "url": "http://andregarzia.com"
+  },
+  "default_locale": "en",
+  "permissions": {
+      "systemXHR": {
+        "description": "Used to send data to Imgur API."
+      },
+      "browser": {
+        "description": "Enables authentication to Imgur via OAuth."
+      }
+    }
+
+}

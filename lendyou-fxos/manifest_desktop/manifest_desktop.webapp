@@ -1,0 +1,15 @@
+{
+  "name": "Lend You!",
+  "description": "Open Web Application to keep track of things you lent and to whom",
+  "launch_path": "/lendyou-fxos/index.html",
+  "icons": {
+    "128": "/lendyou-fxos/images/icon-128.png",
+    "512": "/lendyou-fxos/images/icon-512.png"
+  },
+  "developer": {
+    "name": "Harsh Vardhan & Jorge Gomez",
+    "url": "https://github.com/InfinioPlus"
+  },
+  "permissions": {},
+  "default_locale": "en"
+}

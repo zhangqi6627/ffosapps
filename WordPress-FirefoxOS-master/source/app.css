@@ -1,0 +1,245 @@
+/*
+	Put anything you reference with "url()" in ../assets/
+	This way, you can minify your application, and just remove the "source" folder for production
+*/
+
+hr {
+	/*border-bottom:1px solid gray;*/
+	margin-bottom: 2px;
+	margin-top: -2px;
+	margin-left: -4px;
+	margin-right: -4px;
+}
+
+.nice-padding	{
+	padding: 15px;
+}
+
+/* Posts */
+.listItemContainer {
+	min-height: 60px;
+	color:#777;
+	font-weight: bold;
+	background: #fff;
+	font-size:1.2em;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom:1px solid gray;
+}
+
+/*Menu*/
+.menuItemContainer {
+	height:50px;
+	color:#fff;
+	background-color: #777;
+	font-size:1.2em;
+	padding:10px;
+	/*border-bottom:1px solid gray;*/
+}
+
+/*Compose*/
+.toolbarButton	{
+	height: 32px;
+	margin: 6px;
+	width: 32px;
+	text-align: center;	
+}
+
+/*Settings*/
+.settings-labels {
+	color: #777;
+	font-weight: bold;
+	background: #fff;
+	font-size: 18px;
+	padding: 5px;
+}
+
+.date-labels {
+	color: #0099CC;
+	background: #fff;
+	font-weight: bold;
+	font-size: .75em;
+	padding: 5px;
+}
+
+.buttonIcon		{
+	margin-left: 7px;
+}
+
+.toolbar {
+	background-color: #21759b;
+}
+
+.loginButtons {
+	padding: 25px;
+}
+
+.loginButton {
+	width: 270px;
+	margin-bottom: 5px;
+}
+
+.signupPage {
+	background-color: #06afd8;
+	color: #ffffff;
+}
+
+.signupInputBox {
+	width: 280px;
+	height: 40px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.addExternalInputBox {
+	width: 280px;
+	height: 30px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.banner{
+	padding-left: 20px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	width: 300px;
+}
+
+.logoBanner{
+	padding-left: 96px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	/*width: 128px;*/
+}
+
+.frame {
+	height: 100%;
+	width: 100%;
+	border: 0;
+	background-color: white;
+}
+
+.itemStatus {
+	text-align: right; 
+	font-size: 14px; 
+	font-weight: none; 
+	margin-top: 5px; 
+	margin-left: 225px;
+}
+
+.commentStatus {
+	text-align: right; 
+	font-size: 14px; 
+	font-weight: none; 
+	margin-top: 5px; 
+	margin-left: 205px;
+}
+
+.itemTitle {
+	text-align: left;
+	margin-top: -16px;
+	min-height: 50px;
+	padding-right: 5px;
+}
+
+.itemId {
+	width: 1px;
+	height: 1px;
+	visibility: hidden;
+}
+
+#signupButton {
+	background-color: #2b88d9;
+	width: 280px;
+	color:  #ffffff;
+	margin: 20px;
+	height: 40px;
+}
+
+#centerPiece{
+	padding-left: 96px;
+	padding-top: 48px;
+	padding-bottom: 12px;
+}
+
+#strongButton	{
+	font-weight: bold;
+}
+
+#emButton		{
+	font-style: italic;
+}
+
+#uButton		{
+	text-decoration: underline;
+}
+
+#strikethroughButton	{
+	text-decoration: line-through;
+	text-align: center;
+}
+
+#refresh		{
+	margin-left: 8px;
+	margin-top: -3px;
+}
+
+#saveDraft		{
+	margin-right: -2px;
+	margin-top: -2px;
+}
+
+#newContent		{
+	margin-left: 6px;
+	margin-top: -1px;
+}
+
+#preview		{
+	margin-left: 1px;
+	margin-top: -1px;
+}
+
+#drawer		{
+	margin-left: 10.5px;
+	margin-top: -2px;
+}
+
+#title{
+	font-weight: bold;
+	font-size: 20px;
+	padding-left: 5px;
+	max-width: 300px;
+}
+
+#author {
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+}
+
+#author_email {
+	font-weight: lighter;
+	font-style: italic;
+	text-align: center;
+}
+
+#author_url {
+	text-align: center;
+}
+
+#post_title {
+	text-align: center;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+#comment_content {
+	border-top:1px solid gray;
+	margin-top: 10px;
+	padding-top: 20px;
+}
+
+#postBody {
+	max-width: 300px;
+	padding-left: 5px;
+}

@@ -1,0 +1,49 @@
+{
+  "version": "0.1.3",
+  "name": "eBook",
+  "description": "Great eBook reader for firefox OS. Currently only handles epub file type. Put some ebooks on your SD card and you'll be able to read within seconds. You can also download and read free ebooks from feedbooks.com. Tested on Firefox OS version 1.2 and higher",
+  "launch_path": "/index.html",
+  "type": "privileged",
+  "icons": {
+    "16": "/assets/img/logo-16.png",
+    "32": "/assets/img/logo-32.png",
+    "48": "/assets/img/logo-48.png",
+    "60": "/assets/img/logo-60.png",
+    "90": "/assets/img/logo-90.png",
+    "120": "/assets/img/logo-120.png",
+    "128": "/assets/img/logo-128.png",
+    "256": "/assets/img/logo-256.png"
+  },
+  "developer": {
+    "name": "Jonathan Foucher",
+    "url": "http://jfoucher.com"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "locales": {
+    "es": {
+      "description": "Un lector de libros electronicos para firefox OS. De momento solo se pueden usar ficheros epub. Ponga ficheros epub en su tarjeta SD y podra leerlos en seguida. Ademas, se pueden descargar libros gratis de feedbooks.com",
+      "developer": {
+        "name": "Jonathan Foucher",
+        "url": "http://jfoucher.com"
+      }
+    },
+    "fr": {
+      "description": "Un lecteur de livres électroniques pour Firefox OS. Pour l'instant, seul le format epub est supporté. Ajoutez des fichiers epub à votre carte SD et vous pourrez les lires quelques secondes plus tard. De plus, il est possible de télécharger des livres gratuits depuis feedbooks.com",
+      "developer": {
+        "name": "Jonathan Foucher",
+        "url": "http://jfoucher.com"
+      }
+    }
+  },
+  "permissions": {
+    "device-storage:sdcard": {
+      "access": "readwrite",
+      "description": "Save books to your sdcard"
+    },
+    "storage": {"description": "Cache books for faster opening"},
+    "systemXHR": {"description": "Download books from feedbooks.com"}
+  },
+  "default_locale": "en"
+}

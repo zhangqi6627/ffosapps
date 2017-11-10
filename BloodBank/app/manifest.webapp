@@ -1,0 +1,14 @@
+{
+  "name": "Blood Bank",
+  "description": "A small scale Blood Bank app",
+  "launch_path": "/index.html",
+  "icons": {
+    "512": "/img/icon.png",
+    "128" : "/img/icon_128.png"
+  },
+  "developer": {
+    "name": "Jayadeep KM, Nisham Mohammed",
+    "url": "https://github.com/kmjayadeep/BloodBank"
+  },
+  "default_locale": "en"
+}

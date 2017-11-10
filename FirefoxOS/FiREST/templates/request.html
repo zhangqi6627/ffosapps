@@ -1,0 +1,47 @@
+<div data-role="header">
+  <h1>FiREST</h1>
+  <div class="right-header-button">
+    <a href="#" id="send-request-button">Send</a>
+  </div>
+</div>
+
+<div data-role="content">
+  <select id="request-http-method">
+    <option value="GET">GET</option>
+    <option value="POST">POST</option>
+    <option value="PUT">PUT</option>
+    <option value="DELETE">DELETE</option>
+    <option value="HEAD">HEAD</option>
+    <option value="OPTIONS">OPTIONS</option>
+    <option value="TRACE">TRACE</option>
+  </select>
+  
+  <input type="url" id="request-url" placeholder="URL" value="http://">
+  
+  <div id="request-content-container" style="display:none;">
+    <label for="request-content">Content</label>
+    <textarea id="request-content"></textarea>
+  </div>
+  
+  <ul id="headers-list" data-role="listview" data-inset="true" data-theme="c" data-divider-theme="a">
+    <li data-role="list-divider">HTTP Headers</li>
+  </ul>
+  
+  <select id="add-header-button">
+    <option value="">Add Header</option>
+    <option value="custom">Add Custom Header</option>
+    <optgroup label="Built-in Headers">
+      <option value="Accept: application/json">Accept: application/json</option>
+      <option value="Accept: application/xml">Accept: application/xml</option>
+      <option value="Accept: text/plain">Accept: text/plain</option>
+      <option value="Content-Type: application/json">Content-Type: application/json</option>
+      <option value="Content-Type: application/xml">Content-Type: application/xml</option>
+      <option value="Content-Type: application/x-www-form-urlencoded">Content-Type: application/x-www-form-urlencoded</option>
+      <option value="Accept-Charset: utf-8">Accept-Charset: utf-8</option>
+      <option value="Accept-Charset: iso-8859-1">Accept-Charset: iso-8859-1</option>
+      <option value="Cache-Control: no-cache">Cache-Control: no-cache</option>
+    </optgroup>
+  </select>
+  
+  <button id="clear-session-button" data-role="button" data-theme="b">Clear Session</button>
+</div>

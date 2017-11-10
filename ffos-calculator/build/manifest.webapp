@@ -1,0 +1,155 @@
+{
+  "version": "1.2.8",
+  "name": "Calculator",
+  "description": "A pretty and simple scientific calculator with conversion of units.",
+  "launch_path": "/index.html",
+  "icons": {
+    "32": "/images/32.png",
+    "60": "/images/60.png",
+    "64": "/images/64.png",
+    "128": "/images/128.png",
+    "256": "/images/256.png"
+  },
+  "developer": {
+    "name": "Julien Grillot",
+    "url": "https://github.com/Bahanix/ffos-calculator"
+  },
+  "appcache_path": "/ffos-calculator/manifest.appcache",
+  "installs_allowed_from": ["*"],
+  "csp": "allow 'self'; object-src 'none'",
+  "locales": {
+    "ar": {
+      "name": "حاسبة",
+      "description": "آلة حاسبة علمية لطيفة وبسيطة مع تحويل وحدات القياس"
+    },
+    "bn-bd": {
+      "name": "ক্যালকুলেটর",
+      "description": "সহজ ও সুন্দর একটা বৈজ্ঞানিক ক্যালকুলেটর যার ভেতর ইউনিটের অদলবদল করা যাবে"
+    },
+    "ca": {
+      "name": "Calculadora",
+      "description": "Una calculadora simple i atractiva amb conversió d'unitats."
+    },
+    "cs": {
+      "name": "Kalkulacka",
+      "description": "Hezka a jednoducha kalkulacka s prevodem jednotek."
+    },
+    "da": {
+      "name": "Lommeregner",
+      "description": "En flot og simpel videnskabelig lommeregner med enhedskonvertering."
+    },
+    "de": {
+      "name": "Rechner",
+      "description": "Ein einfaches und effektives wissenschaftlicher Rechner, mit einschließlichigen Einheitenumrechner."
+    },
+    "el": {
+      "name": "Αριθμομηχανή",
+      "description": "Μια απλή και αποτελεσματική αριθμομηχανή, συμπεριλαμβανομένης της μετατροπής μονάδας."
+    },
+    "es": {
+      "name": "Calculadora",
+      "description": "Una calculadora bonita y simple con conversión de unidades de medida."
+    },
+    "eu": {
+      "name": "Kalkulagailua",
+      "description": "Kalkulagailu polita eta erraza bat, neurri-unitateen bihurketarekin."
+    },
+    "fr": {
+      "name": "Calculatrice",
+      "description": "Une calculatrice scientifique jolie et simple avec conversion des unités de mesure."
+    },
+    "he": {
+      "name": "מחשבון",
+      "description": "מחשבון מדעי יפה ופשוט עם המרה של יחידות"
+    },
+    "hi": {
+      "name": "कैलक्यूलेटर",
+      "description": "एक सुंदर और सरल वैज्ञानिक कैलकुलेटर, जो यूनिट/इकाई परिवर्तन में सक्षम"
+    },
+    "hu": {
+      "name": "Számológép",
+      "description": "Egy szép és egyszerű tudományos számológép, mértékegység átváltóval."
+    },
+    "lv": {
+      "name": "Kalkulators",
+      "description": "Vienkāršs zinātnisks kalkulators ar mērvienību pārvēršanu"
+    },
+    "id": {
+      "name": "Kalkulator",
+      "description": "Sebuah kalkulator yang menarik dan sederhana yang dilengkapi dengan konversi satuan."
+    },
+    "it": {
+      "name": "Calcolatrice",
+      "description": "Una calcolatrice scientifica, piacevole e semplice, è compreso la conversione di unità di misura."
+    },
+    "ja": {
+      "name": "電卓",
+      "description": "この電卓には、簡潔さと美しさを両立するインターフェイスがある他、単位換算機能もが備わっている。"
+    },
+    "ko": {
+      "name": "계산기",
+      "description": "단위 환산 기능을 갖는 간단하고 효과적인 계산기."
+    },
+    "mk": {
+      "name": "Калкулатор",
+      "description": "Едноставен и симпатичен научен калкулатор со можност за промена на единици мерки."
+    },
+    "nb-no": {
+      "name": "Kalkulator",
+      "description": "En enkel og effektiv vitenskapelig kalkulator med konvertering av enheter."
+    },
+    "nl": {
+      "name": "Rekenmachine",
+      "description": "Een fraai ontworpen wetenschappelijke rekenmachine voor simpele maar ook ingewikkeldere berekeningen."
+    },
+    "pl": {
+      "name": "Kalkulator",
+      "description": "Ładny i prosty kalkulator naukowy z przeliczaniem jednostek."
+    },
+    "pt-br": {
+      "name": "Calculadora",
+      "description": "Uma calculadora científica bonita e simples com conversão de unidade de medidas."
+    },
+    "ro": {
+      "name": "Calculator",
+      "description": "Un calculator frumos și simplu cu conversie de unități de masura."
+    },
+    "ru": {
+      "name": "Калькулятор",
+      "description": "Красивый, простой в использовании научный калькулятор с функцией конвертера единиц измерения."
+    },
+    "sr": {
+      "name": "Калкулатор",
+      "description": "Једноставан и леп научни калкулатор са могућностима претварања у жељене мерне јединице."
+    },
+    "sr-Latn": {
+      "name": "Kalkulator",
+      "description": "Jednostavan i lep naučni kalkulator sa  mogućnostima pretvaranja u željene merne jedinice."
+    },
+    "sv": {
+      "name": "Miniräknare",
+      "description": "En vacker och enkel vetenskaplig miniräknare med enhetsomvandlare."
+    },
+    "tr": {
+      "name": "Hesap makinesi",
+      "description": "Birim dönüştürebilen, bilimsel ve güzel bir hesap makinesi."
+    },
+    "uk": {
+      "name": "Калькулятор",
+      "description": "Калькулятор Гарний, простий у використанні науковий калькулятор з функцією конвертора одиниць вимірювання."
+    },
+    "vi": {
+      "name": "Máy tính",
+      "description": "Một máy tínhkhoa học để thường và đơn gian, với công nàng chuyên hoa nhưng đơn vì về đó đặc."
+    },
+    "zh-cn": {
+      "name": "计算器",
+      "description": "一个具备单位转换功能的简洁而又美观的科学计算器。"
+    },
+    "zh-tw": {
+      "name": "計算器",
+      "description": "一個具有單位轉換功能的簡潔而又美觀的科學計算器。"
+    }
+  },
+  "default_locale": "en"
+}

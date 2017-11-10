@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "name": "Sound Hunter",
+  "launch_path": "/index.html",
+  "description": "Increase speed for search, finding songs in less than 5 minutes",
+  "icons": {
+    "16": "/images/icons/16.png",
+    "32": "/images/icons/32.png",
+    "48": "/images/icons/48.png",
+    "60": "/images/icons/60.png",
+    "64": "/images/icons/64.png",
+    "90": "/images/icons/90.png",
+    "120": "/images/icons/120.png",
+    "128": "/images/icons/128.png"
+  },
+  "fullscreen": "true",
+  "orientation": "portrait",
+  "developer": {
+    "name": "Raphael Amorim",
+    "url": "http://raphamorim.com"
+  },
+  "default_locale": "pt-br",
+  "locales": {
+    "pt-br": {
+      "name": "Sound Hunter",
+      "description": "Increase speed for search, finding songs in less than 5 minutes"
+    },
+    "en": {
+      "name": "Sound Hunter",
+      "description": "Increase speed for search, finding songs in less than 5 minutes"
+    }
+  }
+}

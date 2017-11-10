@@ -1,0 +1,26 @@
+<div class="accordion" id="accordion-{{id}}">
+{{#if isFull}}
+  <div class="accordion-group-ffos">
+{{else}}
+  <div class="accordion-group">
+{{/if}}
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-{{id}}" href="#collapse-{{id}}-1"> Collapsible Group Item #1 </a>
+    </div>
+    <div id="collapse-{{id}}-1" class="accordion-body collapse in">
+      <div class="accordion-inner">Anim pariatur cliche...</div>
+    </div>
+  </div>
+{{#if isFull}}
+  <div class="accordion-group-ffos">
+{{else}}
+  <div class="accordion-group">
+{{/if}}
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-{{id}}" href="#collapse-{{id}}-2"> Collapsible Group Item #2 </a>
+    </div>
+    <div id="collapse-{{id}}-2" class="accordion-body collapse">
+      <div class="accordion-inner">Anim pariatur cliche...</div>
+    </div>
+  </div>
+</div>

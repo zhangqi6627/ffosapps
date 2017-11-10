@@ -1,0 +1,30 @@
+<div id="episode-header">
+  <p id="episode-name">{{episode.name}}</p>
+  <p id="episode-number">Season {{episode.season}} Episode {{episode.number}}</p>
+</div>
+
+<div id="episode-status">
+  <p class="stars">{{{stars episode.rating}}}</p>
+  <form>
+    <fieldset data-role="controlgroup" data-type="horizontal">
+      {{#if episode.downloaded}}
+        <input type="checkbox" id="downloaded-checkbox" data-status="downloaded" data-show="{{show.apiId}}" data-episode="{{episode.apiId}}" checked>
+      {{else}}
+        <input type="checkbox" id="downloaded-checkbox" data-status="downloaded" data-show="{{show.apiId}}" data-episode="{{episode.apiId}}">
+      {{/if}}
+        <label for="downloaded-checkbox">Downloaded</label>
+      {{#if episode.watched}}
+        <input type="checkbox" id="watched-checkbox" data-status="watched" data-show="{{show.apiId}}" data-episode="{{episode.apiId}}" checked>
+      {{else}}
+        <input type="checkbox" id="watched-checkbox" data-status="watched" data-show="{{show.apiId}}" data-episode="{{episode.apiId}}">        
+      {{/if}}
+        <label for="watched-checkbox">Watched</label>
+    </fieldset>
+  </form>
+</div>
+<div id="episode-poster">
+<!--   <img src="http://thetvdb.com/banners/_cache/{{episode.poster}}" width="250"> -->
+</div>
+<div id="episode-overview">
+  {{episode.overview}}
+</div>

@@ -1,0 +1,42 @@
+<li data-role="list-divider">
+  <div id="season-collapsible" data-role="collapsible" data-inset="true" data-theme="a" data-content-theme="d" data-collapsed-icon="icon-chevron-down" data-expanded-icon="icon-chevron-up">
+    <h4>{{show.name}}</h4>
+    <p style="text-align: center;">
+      <img src="http://thetvdb.com/banners/_cache/{{show.poster}}" width="250">
+    </p>
+    
+    <p class="serie-overview" style="text-align: center;">
+      {{show.overview}}
+    </p>
+    
+    <p class="stars" style="text-align: center;">{{{stars show.rating}}}</p>
+    
+    <button id="update-show-button" data-show="{{show.apiId}}" data-show-name="{{show.name}}" data-theme="b">Update</button>
+    
+    <div data-role="controlgroup" data-mini="true">
+      <button data-theme="a">Rate this Show</button>
+      <a href="http://thetvdb.com/?tab=series&id={{show.tvdbId}}" class="link-button" data-role="button" data-theme="a">
+        Check in TVDB
+      </a>
+      <a href="http://www.imdb.com/title/{{show.imdbId}}" class="link-button" data-role="button" data-theme="a">
+        Check in IMDB
+      </a>
+      <button id="mark-as-seen-button" data-show="{{show.apiId}}" data-show-name="{{show.name}}" data-theme="a">
+        Mark as seen
+      </button>
+      <button id="delete-show-button" data-show="{{show.apiId}}" data-show-name="{{show.name}}" data-theme="a">
+        Delete
+      </button>
+    </div>
+    
+    
+    
+  </div>
+</li>
+{{#each seasons}}
+<li data-icon="icon-chevron-right">
+  <a href="#episodes" class="season-button" data-show="{{this.show}}" data-season="{{this.season}}" data-transition="slide">
+    Season {{this.season}} <span class="ui-li-count">{{this.unwatched}}</span>
+  </a>
+</li>
+{{/each}}

@@ -1,0 +1,7 @@
+{{#each shows}}
+  <li data-icon="icon-chevron-right">
+    <a href="#seasons" class="show-button" data-show="{{this.apiId}}" data-transition="slide">
+      {{this.name}} <span class="ui-li-count">{{this.unwatched}}</span>
+    </a>
+  </li>
+{{/each}}

@@ -1,0 +1,21 @@
+{
+    "version":"2.0",
+    "name": "Quotes",
+    "description": "Quotes app powerd by mBaaS",
+    "launch_path": "/index.html",
+    "icons": {
+        "128": "/images/quotes_128.png",
+        "512": "/images/quotes_128.png"
+    },
+    "developer": {
+        "name": "Romin Irani",
+        "url": "http://www.rominirani.com"
+    },
+    "default_locale": "en",
+    "type": "privileged",
+    "permissions": {
+        "systemXHR": {
+            "description": "Required to make Ajax Calls over the Network"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<div data-role="panel" id="shows-panel" data-position="left" data-display="reveal" data-theme="a">
+  <ul class="panel-list" data-role="listview" data-theme="a">
+    <li data-role="list-divider">TVFrik!</li>
+    <li data-icon="icon-facetime-video" data-theme="d">
+      <a href="#shows" class="panel-button">Shows</a>
+    </li>
+    <li data-icon="icon-search">
+      <a href="#search" class="panel-button">Search</a>
+    </li>
+    <li data-icon="icon-star">
+      <a href="#about" class="panel-button">About</a>
+    </li>
+  </ul>
+</div>
+
+<div data-role="header">
+  <h1>TVFrik!</h1>
+  <div class="left-header-button">
+    <a href="#shows-panel">
+      <i class="ui-icon-icon-reorder"></i>
+    </a>
+  </div>
+</div>
+
+<div data-role="content">
+  <ul id="shows-list" data-role="listview" data-inset="false" 
+    data-filter-theme="d" data-filter="true" data-filter-placeholder="Search..." 
+    data-divider-theme="a" data-count-theme="a"></ul>
+</div>

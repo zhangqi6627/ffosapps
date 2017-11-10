@@ -1,0 +1,47 @@
+ul
+{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+li
+{
+  float:left;
+  width:25%;
+}
+a:link,a:visited
+{
+  display:block;
+  font-weight:bold;
+  color:#FFFFFF;
+  background-color:#bebebe;
+  text-align:center;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+a:hover,a:active
+{
+  opacity:0.4;
+  background-color:#cc0000;
+}
+
+div.img
+{
+  height:auto;
+  width:50%;
+  float:left;
+  text-align:center;
+}
+div.img img
+{
+  display:inline;
+}
+div.desc
+{
+  text-align:center;
+  font-weight:normal;
+  width:150px;
+  font-size:12px;
+  margin:10px 5px 10px 5px;
+}

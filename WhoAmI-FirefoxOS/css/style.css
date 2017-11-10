@@ -1,0 +1,51 @@
+.background{
+	height: 480px;
+	width: 320px;
+	background: url('../images/background.jpg') 0 0 no-repeat;
+	position: absolute;
+	margin: -8px 0px 0px -8px;
+}
+
+#specs{
+	background: #FFF;
+	border-radius:25px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 100px;
+	position: relative;
+	top: 30px;
+	left:-350px;
+	height: 350px;
+	width: 234px;
+	font-family: 'Open Sans', sans-serif;
+	font-size:10pt;
+	color: #4D4E53;
+}
+
+.foxtail{
+	animation: animate-tail 3.75s steps(44) infinite;
+	background: url('../images/foxtail.png') 0 0 no-repeat;
+	width: 156px;
+	height: 156px;
+	top: 150px;
+	left: 50px;
+	position: absolute;
+}
+
+.specsTitle{
+	list-style-type:none;
+	margin-left:-20px;
+	width: 200px;
+	text-align:center;
+	padding-top:20px;
+	font-size: 26px;
+}
+
+@keyframes animate-tail {  
+    0% {background-position: -6864px 0; }
+    100% {background-position: 0 0;}
+}
+
+#lgSpecs, #alcatelSpecs, #zteSpecs, #unsupported {
+	display:none;
+}

@@ -1,0 +1,62 @@
+{
+  "name": "The Wall",
+  "description": "Destroy the wall.",
+  "launch_path": "/index.html",
+  "fullscreen": true,
+    "orientation": "portrait-primary",
+  "developer": {
+    "name": "Lana Huong Scravaglieri",
+    "url": ""
+  },
+  "locales": {
+    "ar": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    },
+    "de": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    },
+    "el": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    },
+    "en-US": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    },
+    "es": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    },
+    "fr": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    },
+    "it": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    },
+    "pt-BR": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    },
+    "ru": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    },
+    "tr": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    },
+    "zh-TW": {
+      "name": "The Wall",
+      "description": "Destroy the wall"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "128": "/resources/icons/the_wall_icon_128.png",
+    "60": "/resources/icons/the_wall_icon_60.png"
+  }
+}

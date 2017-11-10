@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Profile</title>
+	<meta charset="utf-8"> 
+	<link rel="shortcut icon" href="img/icon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" />
+	<style type="text/css">
+
+		#spinner{
+			width: 100%;
+			height: 100%;
+			background: none repeat scroll 0% 0% rgba(162, 224, 234, 0.89);
+			position: absolute;
+			z-index: 100;
+			text-align: center;
+			display: none;
+		}
+
+		#error{
+			color:red;
+			display: none;
+			margin-bottom: 1em;
+		}
+
+	</style>
+	<script src="js/var.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+	<div id="spinner">
+		<br/><br/>
+		<h1>Please Wait...</h1>
+
+	</div>
+	<div data-role="page">
+
+		<div data-role="header" style="overflow:hidden;">
+			<h1>My Profile</h1>
+			<a href="front.html" data-ajax="false" data-icon="home" class="ui-btn-left">Home</a>
+			<!-- <a href="login.html" data-ajax="false" data-icon="gear" class="ui-btn-right" id="btnLogin"></a> -->
+
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<div id="error"></div>
+			<label for="text-basic" id="name"></label>
+			<label for="text-basic" id="email"></label>
+			<label for="text-basic" id="bloodgroup"></label>
+			<label for="text-basic" id="branch"></label>
+			<label for="text-basic" id="mobile"></label>
+			<label for="text-basic" id="year"></label>
+
+			<a href="editprofile.html" data-ajax="false" class="ui-btn ui-btn-a mybtn">Edit Profile</a>
+			<button type="submit" onclick="deletem()">Delete Profile</button>
+
+		</div><!-- /content -->
+
+
+	</div><!-- /page -->
+
+	<script>
+		check();
+		view();
+
+	function deletem(){
+			spinner = $('#spinner');
+		email=localStorage.email;
+		pass=localStorage.password;
+		console.log(email);
+		console.log(pass);
+		if(typeof email == 'undefined' || email == null || pass == 'undefined' || pass == null){
+			showError("Please Login");
+		}
+		spinner.show();
+		$.post(server+'createprofile.php',{'email':email, 'password':pass, 'bloodgroup':"", 'branch':"", 'year':""},function(data,status){
+				 spinner.hide();
+				if(status=='success'){
+					console.log(data);
+					data = $.parseJSON(data);
+					if(data['status']==0)
+						showError(data['error']);
+					else{
+						localStorage.hasprofile=true;
+						window.location="front.html";
+					}
+				}else{
+					console.log('failed');
+				}
+			});
+		localStorage.clear(hasprofile);
+	}
+
+	function check(){
+		return;
+		hasprofile=localStorage.hasprofile;
+		console.log(hasprofile);
+		if(typeof hasprofile=='undefined' || hasprofile==null){
+			window.location="front.html"
+			console.log(hasprofile);
+		}
+	}
+
+	function view(){
+			spinner = $('#spinner');
+		email=localStorage.email;
+		pass=localStorage.password;
+		console.log(email);
+		console.log(pass);
+		if(typeof email == 'undefined' || email == null || pass == 'undefined' || pass == null){
+			showError("Please Login");
+		} else {
+			 spinner.show();
+			$.post(server+'viewprofile.php',{'email':email, 'password':pass},function(data,status){
+				 spinner.hide();
+				if(status=='success'){
+					console.log(data);
+					data = $.parseJSON(data);
+					if(data['status']==0)
+						showError(data['error']);
+					else{
+						name=data['donor_info']['name'];
+						email=data['donor_info']['email'];
+						bloodgroup=data['donor_info']['bloodgroup'];
+						branch=data['donor_info']['branch'];
+						mobile=data['donor_info']['mobile'];
+						year=data['donor_info']['year'];
+						document.getElementById('name').innerHTML = "name : "+name;
+						document.getElementById('email').innerHTML = "email : "+email;
+						document.getElementById('bloodgroup').innerHTML = "bloodgroup : "+bloodgroup;
+						document.getElementById('branch').innerHTML = "branch : "+branch;
+						document.getElementById('mobile').innerHTML = "mobile : "+mobile;
+						document.getElementById('year').innerHTML = "year : "+year;
+					}
+				}else{
+					console.log('failed');
+				}
+			});
+
+}
+}
+
+function showError(data){
+	$('#error').slideDown();
+	$('#error').html(data);
+	setTimeout(function(){
+		$('#error').slideUp();
+	},5000);
+}
+
+
+</script>
+
+</body>
+
+
+</html>

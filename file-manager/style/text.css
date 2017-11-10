@@ -1,0 +1,51 @@
+/*
+* File Manager - A Firefox OS file manager app
+* Copyright (C) 2013-2015 Jhon Klever
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* https://github.com/elfoxero/file-manager/blob/master/LICENSE
+*/
+
+.editor-container {
+  height: calc(100% - 9rem);
+  overflow: none;
+  padding: 0;
+  position: absolute;
+  top: 5rem;
+  width: 100%;
+}
+
+.editor {
+  height: 100%;
+  margin: 0;
+  overflow: none;
+  padding: 0;
+  position: relative;
+}
+
+textarea {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  tab-size: 4;
+  -moz-tab-size: 4;
+}
+
+input {
+  font-size: 2rem;
+  width: 100%;
+}

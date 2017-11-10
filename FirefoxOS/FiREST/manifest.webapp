@@ -1,0 +1,28 @@
+{
+    "version": "0.1",
+    "name": "FiREST",
+    "launch_path": "/index.html",
+    "description": "REST Client for FirefoxOS",
+    "type": "privileged",
+    "icons": {
+        "32": "/images/logo32.png",
+        "48": "/images/logo48.png",
+        "60": "/images/logo60.png",
+        "64": "/images/logo64.png",
+        "128": "/images/logo128.png"
+    },
+    "developer": {
+        "name": "Alejandro Ayuso",
+        "url": "http://ubersoldat.github.io/FirefoxOS/"
+    },
+    "installs_allowed_from": ["*"],
+    "default_locale": "en",
+    "permissions": {
+      "systemXHR": {
+         "description" : "Needed to make requests"
+      },
+      "storage": {
+        "description" : "Keep saved requests and preferences in local storage"
+      }
+    }
+}

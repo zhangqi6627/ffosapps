@@ -1,0 +1,24 @@
+include ../_tools/mixins
+
+block vars
+
+doctype
+html( lang=lang )
+  head
+    meta( charset="utf-8" )
+
+    title= title
+
+    //- Mobile
+    meta( name="viewport" content=meta.viewport.join() )
+
+    //- Stylesheets
+    link( rel="stylesheet" href="#{url.css}"+(pageType || "styles")+".css" )
+    link( rel="stylesheet" href="app://theme.gaiamobile.org/shared/elements/gaia-theme/gaia-theme.css" )
+    if dev
+      script( src="//localhost:35729/livereload.js" )
+
+  body(class=pageType)
+    block content
+
+    script( src="#{url.js}"+(pageType || "scripts")+".js" )

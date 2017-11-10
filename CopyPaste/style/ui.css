@@ -1,0 +1,165 @@
+    .button
+    {        
+        display: block;
+        height: 1rem;
+        white-space: nowrap;
+        background-color: #ddd;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+        background-image: -webkit-linear-gradient(top, #eee, #ccc);
+        background-image: -moz-linear-gradient(top, #eee, #ccc);
+        background-image: -ms-linear-gradient(top, #eee, #ccc);
+        background-image: -o-linear-gradient(top, #eee, #ccc);
+        background-image: linear-gradient(top, #eee, #ccc);
+        padding: 1em;
+        margin: 1em;
+        line-height:0.8em;
+        text-decoration: none;
+        color: #333;
+        border-radius: 1.7em;
+            -moz-border-radius: 1.7em;
+            -webkit-border-radius: 1.7em;
+        text-shadow: 0 1px 0 rgba(255,255,255,.8);
+        box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+            -moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+            -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+        cursor:pointer;
+    }
+    
+    .button:hover
+    {
+        background-color: #eee;        
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
+        background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+        background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+        background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+        background-image: -o-linear-gradient(top, #fafafa, #ddd);
+        background-image: linear-gradient(top, #fafafa, #ddd);
+    }
+    
+    .button:active
+    {
+        -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        position: relative;
+        top: 1px;
+    }
+    
+    .button:focus
+    {
+        outline: 0;
+        background: #fafafa;
+    }    
+    
+    .button:before
+    {
+        float: left;        
+        width: 1em;
+        text-align: center;
+        font-size: 1.7em;
+        margin: 0; margin-right:0.5em;
+        padding: 0;
+        pointer-events: none;
+    }
+    
+    .back{  
+        font-style: italic;
+    }
+    
+    /* Buttons and inputs */
+    
+    button.button, input.button 
+    { 
+        cursor: pointer;
+        overflow: visible; /* removes extra side spacing in IE */
+    }
+    
+    /* removes extra inner spacing in Firefox */
+    button::-moz-focus-inner 
+    {
+      border: 0;
+      padding: 0;
+    }
+    
+    /* If line-height can't be modified, then fix Firefox spacing with padding */
+     input::-moz-focus-inner 
+    {
+      padding: .4em;
+    }
+
+    /* The disabled styles */
+    .button[disabled], .button[disabled]:hover, .button.disabled, .button.disabled:hover 
+    {
+        background: #eee;
+        color: #aaa;
+        border-color: #aaa;
+        cursor: default;
+        text-shadow: none;
+        position: static;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;       
+    }
+    
+    /* Hexadecimal entities for the icons */
+    
+    .back:before
+    {   /*
+        content: "\276E";
+        margin-top:-0.1em;
+        */
+        content: "\2328";
+    }
+    
+    .add:before
+    {
+        content: "\271A";
+    }
+    
+    .edit:before
+    {
+        content: "\270E";        
+    }
+    
+    .delete:before
+    {
+        content: "\2718";        
+    }
+    
+    .save:before
+    {
+        content: "\2714";        
+    }
+    
+    .email:before
+    {
+        content: "\2709";        
+    }
+    
+    .like:before
+    {
+        content: "\2764";        
+    }
+    
+    .next:before
+    {
+        content: "\279C";
+    }
+    
+    .star:before
+    {
+        content: "\2605";
+    }
+    
+    .spark:before
+    {
+        content: "\2737";
+    }
+    
+    .play:before
+    {
+        content: "\25B6";
+    }
+
+
+

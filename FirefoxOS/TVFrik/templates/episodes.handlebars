@@ -1,0 +1,20 @@
+<ul data-role="listview" data-divider-theme="a" data-theme="a">
+  <li data-role="list-divider">
+    <h1>{{show.name}} Season: {{season}}</h1>
+  </li>
+  {{#each episodes}}
+    {{#if this.watched }}
+      <li data-icon="icon-ok">
+    {{else}}
+      {{#if this.downloaded}}
+        <li data-icon="icon-cloud-download">
+      {{else}}
+        <li data-icon="icon-chevron-right">
+      {{/if}}
+    {{/if}}
+      <a href="#episode" class="episode-button" data-show="{{this.show}}" data-season="{{season}}" data-episode="{{this.apiId}}" data-transition="slide">
+        {{this.number}} {{this.name}} 
+      </a>
+    </li>
+  {{/each}}
+</ul>

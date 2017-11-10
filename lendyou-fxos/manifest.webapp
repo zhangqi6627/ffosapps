@@ -1,0 +1,24 @@
+{
+  "version" : "1.1",
+  "fullscreen": "true",
+  "name": "Lend You!",
+  "description": "Open Web Application to keep track of things you lent and to whom",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/images/icon-128.png",
+    "512": "/images/icon-512.png"
+  },
+  "developer": {
+    "name": "Harsh Vardhan & Jorge Gomez",
+    "url": "https://github.com/InfinioPlus"
+  },
+  "type": "privileged",
+  "csp" : "default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'",
+  "permissions": {
+    "contacts": {
+    "description": "Required for autocompletion in the share screen",
+    "access": "readonly"
+    }
+  },
+  "default_locale": "en"
+}

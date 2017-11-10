@@ -1,0 +1,26 @@
+{
+  "name": "HowToGo?",
+  "description": "Find yourself in the biggest cities",
+  "launch_path": "/index.html",
+  "orientation": ["portrait","landscape"],
+  "icons": {
+  
+    "128": "/img/IconApp.png"
+  },
+
+  "developer": 
+
+{
+    "name": "Emmanuel Orozco",
+    "url": "http://www.rockreflector.blogspot"
+  },
+
+  "default_locale": "en",
+
+	
+	"permissions": {
+		"geolocation": {
+			"description" : "Used to locate me"
+				}
+			}
+}

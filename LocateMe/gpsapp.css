@@ -1,0 +1,34 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font: 62.5% sans-serif;
+    background: #F3F3F3;
+    overflow-x: hidden;
+    font-size: 20px;
+}
+header {
+    background: red;
+    padding: 10px;
+    color: white;
+    font-size: 30px;
+    overflow: hidden;
+}
+#save {
+    height: 20vw;
+    background: none repeat scroll 0% 0% #F9F9F9;
+    color: red;
+    margin: 13px auto;
+    display: block;
+    font-size: 1rem;
+    border: 2px solid #BCBCBC;
+}
+#save:hover {
+    background: red;
+    color: white;
+}
+.no-items:after {
+    content: "No coordinates";
+}
+.coordinates-wrapper{
+    text-align: center;
+}

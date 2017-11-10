@@ -1,0 +1,19 @@
+{
+	"name": "Who Am I?", 
+	"description": "An app to be executed at the sales point, showing Mozilla's fox and hardware information",
+	"launch_path": "/foxy.html",
+	"developer": { 
+		"name": "Marcus Saad", 
+		"url": "http://marcussaad.com"
+	},
+	"icons": { 
+		"30": "/images/icons/icon30.png",
+		"60": "/images/icons/icon60.png", 
+		"90": "/images/icons/icon90.png",
+		"128": "/images/icons/icon128.png"
+	},
+	"fullscreen": "true",
+	"default_locale": "pt-BR",
+	"orientation": ["portrait"],
+	"version": "1.0"
+}

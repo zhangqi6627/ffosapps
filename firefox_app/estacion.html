@@ -1,0 +1,519 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<title>Untitled Document</title>
+<title>Localizador</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<div id="header"><button onclick="location.href='select_task.html'" class="boton_back">Regresar</button>Estacion Cercana</div>
+<br>
+<div id="mapa">
+ <section>
+        <article>
+            <div id='map_canvas' style='width:100%; height:400px;'></div>
+        </article>
+        <div id="respuesta">
+            
+        </div>
+    </section>
+    
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        var map;
+		
+		var markersArray = [];
+		var directionDisplay;
+		var directionsService = new google.maps.DirectionsService();
+		
+        var latitud;
+        var longitud;
+        var precision;
+        var lugares=
+		[
+            //Observatorio
+            [19.3982575,-99.2003524], //0  0     01
+			//Tacubaya
+			[19.4031605,-99.187097],
+			//Juanacatlan
+            [19.4129053,-99.1821724],//10    1 1
+			//Chapultepec
+            [19.420813,-99.1762608],//2 0  
+			//Sevilla
+            [19.421926,-99.1706067],
+			//Insurgentes
+            [19.4236259,-99.1627908],
+			//Cuahutemoc
+            [19.425867,-99.154653],
+			//Balderas
+            [19.42741,-99.149074],
+			//Salto del agua
+            [19.4267827,-99.1422343],
+			//Isabel la católica
+            [19.4265399,-99.1374546],
+			//Pino Suarez
+            [19.4257912,-99.132911],
+			//Merced
+            [19.4254927,-99.1246551],
+			//Candelaria
+            [19.4288468,-99.1194355],
+			//San Lazaro
+            [19.4302734,-99.1148007],
+			//Moctezuma
+            [19.4272178,-99.1102624],
+			//Balbuena
+            [19.4232414,-99.102264],
+			//Blvd. Puerto Aereo
+            [19.4197101,-99.0960038],
+			//Gomez Farias
+            [19.4164114,-99.0903497],
+			//Zaragoza
+            [19.412288,-99.0823781],
+			//Pantitlan
+            [19.4153591,-99.0722072],
+			
+			[19.459592, -99.215899],
+			
+			[19.458763, -99.203153],
+			
+			[19.459349,-99.189205],
+			
+			[19.457448,-99.182038],
+			
+			[19.452147,-99.1747],
+			
+			[19.449354,-99.172254],
+			
+			[19.4444,-99.1674],
+			
+			[19.441706,-99.161096],
+			
+			[19.4397232,-99.1555005],
+			
+			[19.437295,-99.147105],
+			
+			[19.436243,-99.141945],
+			
+			[19.435514,-99.137406],
+			
+			[19.433248,-99.1329],
+			
+			[19.425336,-99.132943],
+			
+			[19.418597,-99.134145],
+			
+			[19.406438,-99.135754],
+			
+			[19.400808,-99.136891],
+			
+			[19.3952,-99.1377],
+			
+			[19.38753,-99.138994],
+			
+			[19.379474,-99.140217],
+			
+			[19.3698,-99.1416],
+			
+			[19.361883,-99.142942],
+			
+			[19.353259,-99.145002],
+			
+			[19.344168,-99.142685],
+			
+			[19.495358,-99.119468],
+			
+			[19.483747,-99.126549],
+			
+			[19.47691, -99.132171],
+			
+			[19.470153,-99.136891],
+			
+			[19.454979,-99.142814],
+			
+			[19.445146,-99.145389],
+			
+			[19.437295,-99.147105],
+			
+			[19.433167,-99.147792],
+			
+			[19.42744,-99.149036],
+			
+			[19.419508,-99.150581],
+			
+			[19.413578,-99.153886],
+			
+			[19.406637,-99.155753],
+			
+			[19.395586,-99.156268],
+			
+			[19.406637,-99.155753],
+			
+			[19.380021,-99.158885],
+			
+			[19.370952,-99.164937],
+			
+			[19.361417,-99.170709],
+			
+			[19.353724,-99.176052],
+			
+			[19.346395,-99.18103],
+			
+			[19.335887,-99.176652],
+			
+			[19.324427,-99.17397],
+			
+			[19.484921,-99.104404],
+			
+			[19.47428,-99.108009],
+			
+			[19.46461,-99.111958],
+			
+			[19.457893,-99.113932],
+			
+			[19.449112,-99.116507],
+			
+			[19.438974,-99.118266],
+			
+			[19.428837,-99.119511],
+			
+			[19.421633,-99.120541],
+			
+			[19.409004,-99.122171],
+			
+			[19.40273,-99.121699],
+			
+			[19.50082,-99.149294],
+			
+			[19.489573,-99.14526],
+			
+			[19.478973,-99.140668],
+			
+			[19.470153,-99.136891],
+			
+			[19.463315,-99.130797],
+			
+			[19.458742,-99.119296],
+			
+			[19.457893,-99.113932],
+			
+			[19.451378,-99.105434],
+			
+			[19.451236,-99.095886],
+			
+			[19.445672,-99.087238],
+			
+			[19.433734,-99.087667],
+			
+			[19.424142,-99.087496],
+			
+			[19.415359,-99.072132],
+			
+			[19.504541,-99.20002],
+			
+			[19.495116,-99.196286],
+			
+			[19.490989,-99.186416],
+			
+			[19.490746,-99.173841],
+			
+			[19.488683,-99.162769],
+			
+			[19.490625,-99.15586],
+			
+			[19.489573,-99.14526],
+			
+			[19.487712,-99.13466],
+			
+			[9.483747,-99.126549],
+			
+			[19.481522,-99.117923],
+			
+			[19.484921,-99.104404],
+			
+			[19.504541,-99.20002],
+			
+			[19.490423,-99.19487],
+			
+			[19.479135,-99.190063],
+			
+			[19.469951,-99.190578],
+			
+			[19.459349,-99.189205],
+			
+			[19.445793,-99.191823],
+			
+			[19.433511,-99.191029],
+			
+			[19.425498,-99.191995],
+			
+			[19.411858,-99.191265],
+			
+			[19.403439,-99.187102],
+			
+			[19.391275,-99.186051],
+			
+			[19.384757,-99.186308],
+			
+			[19.375891,-99.187531],
+			
+			[19.360648,-99.190149],
+			
+			[19.444458,-99.139734],
+			
+			[19.436243,-99.141945],
+			
+			[19.431305,-99.141569],
+			
+			[19.426813,-99.142213],
+			
+			[19.421612,-99.143372],
+			
+			[19.413558,-99.144187],
+			
+			[19.406438,-99.135754],
+			
+			[19.406495,-99.126248],
+			
+			[19.40273,-99.121699],
+			
+			[19.398521,-99.113545],
+			
+			[19.3886637,-99.1122043],
+			
+			[19.379292,-99.109597],
+			
+			[19.374069,-99.108095],
+			
+			[19.36492,-99.109554],
+			
+			[19.356134,-99.101315],
+			
+			[19.357834,-99.093461],
+			
+			[19.356012,-99.085522],
+			
+			[19.351234,-99.074707],
+			
+			[19.34593,-99.063892],
+			
+			[19.403439,-99.187102],
+			
+			[19.406212,-99.178905],
+			
+			[19.406131,-99.168477],
+			
+			[19.406637,-99.155753],
+			
+			[19.40696,-99.144874],
+			
+			[19.406438,-99.135754],
+			
+			[19.409004,-99.122171],
+			
+			[19.408478,-99.112902],
+			
+			[19.408478,-99.103074],
+			
+			[19.408357,-99.091229],
+			
+			[19.407142,-99.082432],
+			
+			[19.415359,-99.072132],
+			
+			[19.404835,-99.069901],
+			
+			[19.398683,-99.059365],
+			
+			[19.391335,-99.046383],
+			
+			[19.385162,-99.03574],
+			
+			[19.37332,-99.017093],
+			
+			[19.364737,-99.005892],
+			
+			[19.358968,-98.976903],
+			
+			[19.350526,-98.960745],
+			
+			[19.446603,-99.153199],
+			
+			[19.445146,-99.145389],
+			
+			[19.444458,-99.139734],
+			
+			[19.443386,-99.131334],
+			
+			[19.442495,-99.12333],
+			
+			[19.438974,-99.118266],
+			
+			[19.430213,-99.114833],
+			
+			[19.436567,-99.103675],
+			
+			[19.436567,-99.103675],
+			
+			[19.445672,-99.087238],
+			
+			[19.451034,-99.07917],
+			
+			[19.458115,-99.069192],
+			
+			[19.461656,-99.061704],
+			
+			[19.473066,-99.054537],
+			
+			[19.485851,-99.048915],
+			
+			[19.490908,-99.046597],
+			
+			[19.501629,-99.042048],
+			
+			[19.515301,-99.035997],
+			
+			[19.521328,-99.033422],
+			
+			[19.528447,-99.030118],
+			
+			[19.534595,-99.0275]
+            
+        ];
+        $(document).ready(function() {
+            localizame();            
+        });
+        
+        function localizame() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(coordenadas, errores);
+            }else{
+                alert('Oops! Tu navegador no soporta geolocalización. Bájate Firefox, que es gratis!');
+            }
+        }
+        
+        function coordenadas(position) {
+            latitud = position.coords.latitude;
+		
+          
+			longitud = position.coords.longitude;
+			
+			
+			
+			
+            precision = position.coords.accuracy;  
+            cargarMapa();
+        }
+        
+        function errores(err) {
+            if (err.code == 0) {
+              alert("Oops! Algo ha salido mal");
+            }
+            if (err.code == 1) {
+              alert("Oops! No has aceptado compartir tu posición");
+            }
+            if (err.code == 2) {
+              alert("Oops! No se puede obtener la posición actual");
+            }
+            if (err.code == 3) {
+              alert("Oops! Hemos superado el tiempo de espera");
+            }
+        }
+         
+        function cargarMapa() {
+            var latlon = new google.maps.LatLng(latitud,longitud);
+			
+            var myOptions = {
+                zoom: 6,
+                center: new google.maps.LatLng(latitud,longitud),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map($("#map_canvas").get(0), myOptions);
+            
+            var coorMarcador = new google.maps.LatLng(latitud,longitud);
+                
+            var marcador = new google.maps.Marker({
+                position: coorMarcador,
+                icon: "img/firefox.png",
+				map: map,
+                title: "Dónde estoy?"
+            });
+			
+			var coorMetro= cercano (coorMarcador,lugares);
+			
+			var marcadorM = new google.maps.Marker({
+                position: coorMetro,
+				icon: "img/metro_trans.png",
+                map: map,
+                title: "Metro"
+            });
+	        var intermedio = google.maps.geometry.spherical.interpolate(coorMarcador, coorMetro, 0.5);
+			map.setCenter(intermedio); // edit this line
+			var bounds = new google.maps.LatLngBounds();
+			bounds.extend(marcadorM.getPosition());
+			bounds.extend(marcador.getPosition());
+			map.fitBounds(bounds);
+			
+			directionsDisplay = new google.maps.DirectionsRenderer();
+			directionsDisplay.setMap(map);
+				//En mi casi como quiero trazar entre 2 markers mios desactivo los clasicos markers de A y B.
+			directionsDisplay.setOptions( { suppressMarkers: true } );
+			
+			calcRoute(coorMarcador, coorMetro);
+        }
+		
+    	function cercano(my_position, points)
+	 	{
+        
+			var inicio= my_position;
+			
+			var destino= new google.maps.LatLng(points[0][0],points[0][1]);
+			
+			
+		    var disInicial= google.maps.geometry.spherical.computeDistanceBetween(inicio,destino);
+			
+			for(i=1; i<points.length; i++)
+			{
+				 var tempPos = new google.maps.LatLng(points[i][0],points[i][1]);
+			
+				 var temp = google.maps.geometry.spherical.computeDistanceBetween(inicio,tempPos);
+				
+				if(temp<disInicial)
+				{
+				 	destino=new google.maps.LatLng(points[i][0],points[i][1]);
+					disInicial=temp;
+				}
+			}
+			return destino;
+	    }
+		
+		function calcRoute(start, end)
+		{
+			var start = start;
+			var end = end;
+			var request = {
+			origin: start,
+			destination: end,
+			travelMode: google.maps.DirectionsTravelMode.WALKING
+		};
+			directionsService.route(request, function(response, status) {
+		if (status == google.maps.DirectionsStatus.OK)
+		{
+			directionsDisplay.setDirections(response);
+		}
+		});
+		}
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body
+{
+	background:
+	linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+	linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+	linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+	linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+	linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+	linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+	background-color: #131313;
+	background-size: 20px 20px;
+}
+
+#imagen_inicial
+{
+	padding:0px;
+	border:0px;
+	margin:0px;
+	background-color:white;
+	width:250px;
+	height:250px;
+	position:absolute;
+	top:40px;
+	left:30px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+}
+
+.boton_azul
+{
+	background-color:#33DBD3;
+	width:100px;
+	height:60px;
+  	border-radius: 13px; 
+	position:absolute;
+	top:325px;
+	left:180px;
+	color:#FFF;
+	
+}
+
+#header
+{
+	width:100%;
+	height:10%;
+	text-align:center;
+	font-family:arial;
+	font-size:20px;
+	border-radius:10px;
+	color:white;
+	background: -moz-linear-gradient(45deg, rgba(76,76,76,0.9) 0%, rgba(80,80,80,0.9) 4%, rgba(89,89,89,0.91) 12%, rgba(102,102,102,0.92) 25%, rgba(71,71,71,0.93) 34%, rgba(107,107,107,0.97) 76%, rgba(107,107,107,1) 100%); /* FF3.6+ */
+	}
+	
+.boton_back
+{
+	background-color:#999;
+	width:20%;
+	height:20px;
+	border-radius:13px;
+	position:absolute;
+	top:10px;
+	line-height:18px;
+	left:15px;
+	font-size:13px;
+}
+
+#div_metro
+{
+	text-align:center;
+	border-radius:11px;
+	background-color:white;
+	width:125px;
+	height:53px;
+	position:absolute;
+	top:55px;
+	left:25px;
+}
+
+#div_metrobus
+{
+	text-align:center;
+	background-color:white;
+	width:125px;
+	height:53px;
+	position:absolute;
+	top:55px;
+	left:170px;
+	border-radius:11px;
+}
+
+#div_estaciones
+{
+	border-radius:11px;
+	background-color:white;
+	width:271px;
+	height:53px;
+	position:absolute;
+	top:130px;
+	left:23.5px;
+	font-family:verdana;
+	font-size:22px;
+	line-height:50px;
+}
+#div_twitter
+{
+	background-color:white;
+	border-radius:11px;
+	width:271px;
+	height:53px;
+	position:absolute;
+	top:205px;
+	left:23.5px;
+	font-family:verdana;
+	font-size:15px;
+}

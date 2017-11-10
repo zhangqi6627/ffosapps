@@ -1,0 +1,16 @@
+{
+    "version":"2.0",
+    "name": "Web Activities",
+    "description": "This app demonstrates how to use Web Activities (Intents) in a Firefox OS App.",
+    "launch_path": "/index.html",
+    "fullscreen": "false",
+    "icons": {
+        "128": "/images/web_activities_128.png",
+        "512": "/images/web_activities_512.png"
+    },
+    "developer": {
+        "name": "Romin Irani",
+        "url": "http://www.rominirani.com"
+    },
+    "default_locale": "en"
+}

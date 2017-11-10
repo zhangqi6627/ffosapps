@@ -1,0 +1,1 @@
+(function(){var t;t=document.getElementById("vibration"),t.checked="true"===localStorage.getItem("vibration"),t.onchange=function(){return localStorage.setItem("vibration",this.checked)}}).call(this);

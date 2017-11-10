@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Activities</title>
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+    <script src="app.js"></script>
+  </head> 
+
+  <body> 
+
+    <!-- Start of first page: #home -->
+    <div data-role="page" id="home">
+
+      <div data-role="header" data-position="fixed" id="header">
+        <h3>Web Activities</h3>  
+      </div><!-- /header -->
+
+      <div data-role="content">
+        <a href="#" id="btnCall" data-role="button">Call</a>
+        <a href="#" id="btnSMS" data-role="button">SMS</a>
+        <a href="#" id="btnPickImage" data-role="button">Pick Image</a>
+        <a href="#" id="btnViewWebPage" data-role="button">View Web Page</a>
+        <a href="#" id="btnOpenSettings" data-role="button">Open Phone Settings</a>
+      </div><!-- /content -->
+
+    </div><!-- /page home -->
+
+    <!-- Second page to show image -->
+    <div data-role="page" id="showImage">
+
+      <div data-role="header" data-add-back-btn="true">
+        <h1>You Picked this...</h1>
+      </div>
+
+      <div id="pickImage" data-role="content">
+
+      </div>
+
+    </div><!-- second page -->
+
+  </body>
+</html>

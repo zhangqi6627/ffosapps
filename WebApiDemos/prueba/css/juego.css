@@ -1,0 +1,147 @@
+div{
+	position: absolute;
+	border-radius: 20px;
+	text-align: center;
+	color:  white;
+	width: 10px;
+	height: 10px;
+	z-index: 1;
+}
+
+.low{
+	width: 100px;
+	height: 100px;
+	opacity: .25;
+}
+.medium{
+	width: 85px;
+	height: 85px;
+	opacity: .50;
+}
+.high{
+	width: 60px;
+	height: 60px;
+	opacity: .75;
+}
+.important{
+	width: 30px;
+	height: 30px;
+}
+.alert{
+	background-color: white !important;
+}
+.alert div{
+    background-color: #FF5151 !important;
+}
+
+#interface div,body{
+    -moz-transition:all 1s;
+}
+#points{
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	color: purple;
+}
+#time{
+	position: absolute;
+	top: 100px;
+	right: 0;
+	color: purple;
+}
+#corazon {
+    width: 100px;
+    height: 90px;
+    background-color: #FF5151;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+#corazon:before,
+#corazon:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 80px;
+    background: white;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#corazon:before{
+	
+}
+#corazon:after {
+	margin-left: -50px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+#corazon.active{
+	display: block;
+}
+.l_5{
+	/*background-color: #202020;*/
+	color: darkgray;
+}
+.l_5 div
+{
+	background-color:darkgray;
+}
+.l_4{
+	/*background-color: #484848;*/
+	color: deeppink;
+}
+.l_4 div{
+	background-color: deeppink;
+}
+.l_3{
+	/*background-color: #959595;*/
+	color: darkslategray;
+}
+.l_3 div{
+	background-color:darkslategray;
+}
+.l_2{
+	/*background-color: #E5E5E5;*/
+	color:  darkviolet;
+}
+.l_2 div{
+	background-color: darkviolet;
+}
+.l_1{
+	color:  darkred;
+}
+.l_1 div{
+	background-color: darkred;
+}
+/*****************Triangulo************************/
+/*div{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid black;
+}*/

@@ -1,0 +1,97 @@
+/*
+* File Manager - A Firefox OS file manager app
+* Copyright (C) 2013-2015 Jhon Klever
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* https://github.com/elfoxero/file-manager/blob/master/LICENSE
+*/
+
+
+.file-icon {
+  background: url(images/icons.png) no-repeat;
+  background-size: 6rem 102rem;
+  content: '';
+  display: block;
+  height: 6rem;
+  position: relative;
+  width: 6rem;
+  z-index: 1;
+}
+
+.folder {
+  background-position: 0 0;
+}
+
+.image {
+  background-position: 0 -60px;
+}
+
+.audio {
+  background-position: 0 -120px;
+}
+
+.video {
+  background-position: 0 -180px;
+}
+
+.pdf {
+  background-position: 0 -240px;
+}
+
+.zip {
+  background-position: 0 -300px;
+}
+
+.text {
+  background-position: 0 -360px;
+}
+
+.developer {
+  background-position: 0 -420px;
+}
+
+.html {
+  background-position: 0 -480px;
+}
+
+.css {
+  background-position: 0 -540px;
+}
+
+.word {
+  background-position: 0 -600px;
+}
+
+.excel {
+  background-position: 0 -660px;
+
+}
+
+.powerpoint {
+  background-position: 0 -720px;
+}
+
+.unknown {
+  background-position: 0 -780px;
+}
+
+.card {
+  background-position: 0 -840px;
+}
+
+.ebook {
+  background-position: 0 -900px;
+}
+
+.rss {
+  background-position: 0 -960px;
+}

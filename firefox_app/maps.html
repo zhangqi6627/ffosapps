@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Localizador</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        
+    </header>
+    <section>
+        <article>
+            <div id='map_canvas' style='width:100%; height:300px;'></div>
+        </article>
+        <div id="respuesta">
+            
+        </div>
+    </section>
+    
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        var map;
+        var latitud;
+        var longitud;
+        var precision;
+        var lugares=
+		[
+            //Linea 1
+            [19.3982575,-99.2003524]
+            
+        ];
+        $(document).ready(function() {
+            localizame();            
+        });
+        
+        function localizame() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(coordenadas, errores);
+            }else{
+                alert('Oops! Tu navegador no soporta geolocalización. Bájate Chrome, que es gratis!');
+            }
+        }
+        
+        function coordenadas(position) {
+            latitud = position.coords.latitude;
+		
+          
+			longitud = position.coords.longitude;
+			
+			
+			
+			
+            precision = position.coords.accuracy;  
+            cargarMapa();
+        }
+        
+        function errores(err) {
+            if (err.code == 0) {
+              alert("Oops! Algo ha salido mal");
+            }
+            if (err.code == 1) {
+              alert("Oops! No has aceptado compartir tu posición");
+            }
+            if (err.code == 2) {
+              alert("Oops! No se puede obtener la posición actual");
+            }
+            if (err.code == 3) {
+              alert("Oops! Hemos superado el tiempo de espera");
+            }
+        }
+         
+        function cargarMapa() {
+            var latlon = new google.maps.LatLng(latitud,longitud);
+			
+            var myOptions = {
+                zoom: 6,
+                center: new google.maps.LatLng(latitud,longitud),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map($("#map_canvas").get(0), myOptions);
+            
+            var coorMarcador = new google.maps.LatLng(latitud,longitud);
+                
+            var marcador = new google.maps.Marker({
+                position: coorMarcador,
+                map: map,
+                title: "Dónde estoy?"
+            });
+			
+			var coorMetro= cercano (coorMarcador,lugares);
+			
+			var marcadorM = new google.maps.Marker({
+                position: coorMetro,
+                map: map,
+                title: "Metro"
+            });
+	        var intermedio = google.maps.geometry.spherical.interpolate(coorMarcador, coorMetro, 0.5);
+			map.setCenter(intermedio); // edit this line
+			var bounds = new google.maps.LatLngBounds();
+			bounds.extend(marcadorM.getPosition());
+			bounds.extend(marcador.getPosition());
+			map.fitBounds(bounds);
+        }
+		  
+    	function cercano(my_position, points)
+	 	{
+        
+			var inicio= my_position;
+			
+			var destino= new google.maps.LatLng(points[0][0],points[0][1]);
+			
+			
+		    var disInicial=new google.maps.geometry.spherical.computeDistanceBetween(inicio,destino);
+			
+			for(i=1; i<points.length; i++)
+			{
+				var temp=new google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(points[i][0],points[i][1]));
+				if(temp<disInicial)
+				{
+				 	destino=new google.maps.LatLng(points[i][0],points[i][1]);
+					disInicial=temp;
+				}
+			}
+			return destino;
+	    }
+    </script>
+</body>
+</html>

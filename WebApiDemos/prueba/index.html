@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	
+</head>
+<body>
+	<style type="text/css">
+	body{
+		background-color: white;
+	}
+	#btn{
+		background-color: #8B0000;
+    border-radius: 10px;
+    color: #FFFFFF;
+    display: table;
+    font-size: 30px;
+    margin: auto;
+    padding: 10px 30px;
+    text-decoration: none;
+	}
+	#infinito {
+		position: relative;
+		width: 212px;
+		height: 100px;
+		display: table;
+		margin:auto;
+	}
+
+	#infinito:before,
+	#infinito:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 60px;
+		height: 60px;
+		border: 20px solid #202020;
+		border-radius: 50px 50px 0 50px;
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+
+	#infinito:after {
+		left: auto;
+		right: 0;
+		-moz-border-radius: 50px 50px 50px 0;
+		border-radius: 50px 50px 50px 0;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	</style>
+	<br>
+	<br>
+	<br>
+	<div id="infinito"></div>
+	<br>
+	<br>
+	<br>
+	<a id="btn" href="juego.html">Jugar</a>
+</body>
+</html>

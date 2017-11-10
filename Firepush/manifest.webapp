@@ -1,0 +1,41 @@
+{
+	"name": "Firepush",
+	"description": "This is a porting for Firefox OS of Pushbullet. Actually it is an unofficial version.",
+	"launch_path": "/index.html",
+	"installs_allowed_from": ["*"],
+	"fullscreen": "false",
+	"default_locale": "en",
+	"locales": {
+		"eo": {
+			"name": "Pushbullet",
+			"description": "Porto de Pushbullet al Firefox OS. Aktuale ĝi ne estas oficiala versio."
+		},
+		"it": {
+			"name": "Pushbullet",
+			"description": "Port di Pushbullet per Firefox OS. Attualmente non è una versione ufficiale."
+		},
+		"ru": {
+			"name": "Pushbullet",
+			"description": "Это неофициальное приложение Pushbullet для Firefox OS."
+		}
+	},
+	"orientation": ["portrait","landscape"],
+	"version": "0.2",
+	"icons": {
+		"16": "images/icon16.png",
+		"32": "images/icon32.png",
+		"48": "images/icon48.png",
+		"64": "images/icon64.png",
+		"128": "images/icon128.png"
+	},
+	"developer": {
+		"name": "{Duts}",
+		"url": "https://www.github.com/RDuts/Pushbullet"
+	},
+	"permissions": {
+  		"desktop-notification": { "description": "Needed for creating system notifications." },
+		"alarms": { "description": "Required to schedule wakeups if internet is unstable"}
+	},
+	"messages": [{"notification": "/index.html"}, { "alarm": "/index.html" }]
+	
+}

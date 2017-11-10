@@ -1,0 +1,15 @@
+{
+  "version": "1.2",
+  "name": "FFDoku",
+  "description": "Sudoku",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "taratatach",
+    "url": "https://github.com/taratatach/FFDoku"
+  },
+  "icons": {
+    "128": "/icons/icon.png",
+    "64": "/icons/icon-64.png"
+  },
+  "orientation": "portrait"
+}

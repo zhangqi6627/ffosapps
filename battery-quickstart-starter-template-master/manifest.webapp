@@ -1,0 +1,12 @@
+{
+  "name": "BatteryMonitor",
+  "description": "Battery Monitor",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/images/icon-128.png"
+  },
+  "developer": {
+    "name": "Chi Zhang",
+    "url": "https://zhangqi6627.github.io/"
+  }
+}

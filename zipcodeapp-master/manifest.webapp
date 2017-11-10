@@ -1,0 +1,21 @@
+{
+    "version":"1.0",
+    "name": "Zipcodes",
+    "description": "This app gives you information on zipcodes of the US!",
+    "launch_path": "/index.html",
+    "icons": {
+        "128": "/images/zipcode_128.png",
+        "512": "/images/zipcode_512.png"
+    },
+    "developer": {
+        "name": "Romin Irani",
+        "url": "http://www.rominirani.com"
+    },
+    "default_locale": "en",
+    "type": "privileged",
+    "permissions": {
+        "systemXHR": {
+            "description": "Required to make Ajax Calls over the Network"
+        }
+    }
+}

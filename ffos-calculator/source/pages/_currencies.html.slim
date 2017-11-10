@@ -1,0 +1,68 @@
+.input.currencies
+  .row.collapse
+    .small-6.columns
+      button.button.clear = "C"
+    .small-3.columns
+      button.button.currency value="JPY"
+        = "JPY"
+        .symbol.currency value="JPY" = "¥"
+    .small-3.columns
+      button.button.currency value="CNY"
+        = "CNY"
+        .symbol.currency value="CNY" = "¥"
+  .row.collapse
+    .small-3.columns
+      button.button.currency value="EUR"
+        = "EUR"
+        .symbol.currency value="EUR" = "€"
+    .small-3.columns
+      button.button.currency value="GBP"
+        = "GBP"
+        .symbol.currency value="GBP" = "£"
+    .small-3.columns
+      button.button.currency value="CHF"
+        = "CHF"
+        .symbol.currency value="CHF" = "fr"
+    .small-3.columns
+      button.button.currency value="SGD"
+        = "SGD"
+        .symbol.currency value="SGD" = "$"
+  .row.collapse
+    .small-3.columns
+      button.button.currency value="USD"
+        = "USD"
+        .symbol.currency value="USD" = "$"
+    .small-3.columns
+      button.button.currency value="AUD"
+        = "AUD"
+        .symbol.currency value="AUD" = "$"
+    .small-3.columns
+      button.button.currency value="CAD"
+        = "CAD"
+        .symbol.currency value="CAD" = "$"
+    .small-3.columns
+      button.button.currency value="HKD"
+        = "HKD"
+        .symbol.currency value="HKD" = "$"
+  .row.collapse.double
+    .small-9.columns
+      .row.collapse.half
+        .small-4.columns
+          button.button.currency value="SEK"
+            = "SEK"
+            .symbol.currency value="SEK" = "kr"
+        .small-4.columns
+          button.button.currency value="NOK"
+            = "NOK"
+            .symbol.currency value="NOK" = "kr"
+        .small-4.columns
+          button.button.currency value="BTC"
+            = "BTC"
+            .symbol.currency value="BTC" = "฿"
+      .row.collapse.half
+        .small-8.columns
+          button.button.operator = " →"
+        .small-4.columns
+          button.button.backspace = "&#9003;"
+    .small-3.columns.double
+      button.button.equal = "="

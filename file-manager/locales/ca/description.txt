@@ -1,0 +1,27 @@
+El File Manager és una aplicació per a Firefox OS que us permet explorar i gestionar els fitxers de la targeta SD.
+
+Requisits:
+
+Aquesta aplicació necessita permís per accedir a la targeta de memòria.
+
+Característiques:
+
+- Permet copiar, moure, reanomenar i suprimir fitxers.
+- Permet crear, reanomenar i suprimir carpetes.
+- Obre fitxers de música, vídeo, text i imatges.
+- Obre documents PDF (es necessita o més recent)
+- Permet definir qualsevol imatge com fons.
+- Permet compartir qualsevol fitxer via Bluetooth, correu electrònic i més.
+- Permet crear i editar fitxers de text senzill.
+- Permet gestionar les carpetes en mantenir-les premudes durant uns segons.
+
+Per a desenvolupadors:
+
+Si heu creat una aplicació que interactua amb els fitxers de la targeta SD, el File Manager pot utilitzar la vostra aplicació per obrir els fitxers directament. Consulteu el repositori en GitHub per obtenir més informació.
+
+Recursos:
+
+Aquesta aplicació és disponible sota la llicència GPL-3.0+.
+Funciona amb una variant de la biblioteca Building Blocks i el tema de icones Numix Circle.
+
+Hem provat aquesta aplicació en un dispositiu ZTE Open amb Firefox OS 1.1 i els simuladors de Firefox OS 1.3, 1.4 i 2.0.
